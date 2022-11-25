@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <button id="register_btn">Register</button>
+        <button id="home_btn">Home</button>
+    </div>
+    <div id="home_page"></div>
+    <div id="register_page"></div>
+    <script>
+        //Load home page for the first time
+        $('#home_page').load('home.html');
+
+        //Load home page onclick
+        $('#home_btn').on('click',()=>{
+            $('#register_page').css('display','none');
+            $('#home_page').css('display','block');
+            $('#home_page').load('home.html')
+        });
+
+        //Load register page onclick
+        $('#register_btn').on('click',()=>{
+            $('#home_page').css('display','none');
+            $('#register_page').css('display','block');
+            $('#register_page').load('register.html')
+        });
+
+        //سؤال عن امكانية تضمين bootstrap مرة واحدة في حال استخدام الهيكلية الحالية
+    </script>
+</body>
+</html>
