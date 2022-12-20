@@ -1,24 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ADMIN.MTN</title>
-
     <form style="background:blue;border-style: double;box-shadow: yellow;size: landscape " >
-      <h2>  <input type="button" value="admins" onclick="document.getElementById('show admins').hidden=false,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true">
-        <input type="button" value="users" onclick="document.getElementById('show users').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true" >
-        <input type="button" value="offers" onclick="document.getElementById('show offers').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show bills').hidden=true">
-        <input type="button" value="images" onclick="document.getElementById('show offers').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show bills').hidden=true">
-          <input type="button" value="bills" onclick="document.getElementById('show bills').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true">
-          <input type="submit" value="go back"></h2>
+      <h2>  <input type="button" value="admins" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show admins').hidden=false,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true">
+        <input type="button" value="users" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show users').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true">
+        <input type="button" value="offers" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show offers').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show bills').hidden=true">
+           <input type="button" value="bills" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show bills').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true">
+          <input type="button" value="jobs" onclick="document.getElementById('show jobs').hidden=false,document.getElementById('show bills').hidden=true,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true">
+          <input type="button" value="log out" onclick="document.getElementById('go').click()">
+          </h2>
+        <a href="//localhost:63342/bwp-501-bsmk3/php/admin.php?who=destroy" id="go"></a>
     </form>
 </head>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=admins" id="show admins">
+<footer id="show admins">
+<form name="admins" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=admins" >
     <table id="admins" border="10" name="admins">
-        <tr><td><input type="button" onclick="document.getElementById('admins edit').hidden=false" value="edit_admin"></td>
-            <td><input type="button" onclick="document.getElementById('admins delete').hidden=false" value="delete_admin"> </td>
-        <td><input type="button" onclick="document.getElementById('add admin').hidden=false" value="add_admin"></td></tr>
+        <tr><td><input type="button" onclick="document.getElementById('admins edit').hidden=false,document.getElementById('admins delete').hidden=true,document.getElementById('add admin').hidden=true" value="edit_admin"></td>
+            <td><input type="button" onclick="document.getElementById('admins edit').hidden=true,document.getElementById('admins delete').hidden=false,document.getElementById('add admin').hidden=true" value="delete_admin"> </td>
+        <td><input type="button" onclick="document.getElementById('admins edit').hidden=true,document.getElementById('admins delete').hidden=true,document.getElementById('add admin').hidden=false" value="add_admin"></td></tr>
         <tr><h2>admins : </h2></tr>
         <tr id=><td>id </td>
                 <td>user_name </td>
@@ -27,41 +30,42 @@
     </table>
 </form>
 <!--==========================================================================================================================================================================-->
-<form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/insert.php?who=admins">
+<form name="admins" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/insert.php?who=admins">
     <table id="add admin" border="10" hidden="true" name="admins">
         <tr><td>add admin</td></tr>
             <td>add user name </td><td> <input type="text" name="user_name"> </td>
             <td>add password</td><td> <input type="text" name="password"> </td></tr>
             <td>add email</td><td> <input type="text" name="email"> </td></tr>
-            <tr> <td><input type="submit" value="add" onclick="alert('are you wont to add admin?')">
+            <tr> <td><input type="submit" value="add" onclick="return confirm('are you wont to add admin?')">
                 <input type="button" value="go back" onclick="document.getElementById('add admin').hidden=true"></td></tr>
 
     </table>
 </form>
 <!--==========================================================================================================================================================================-->
-<form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=admins">
+<form name="admins" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=admins">
     <table id="admins edit" border="10" hidden="true" name="admins">
         <tr><td>edit admin </td></tr>
         <tr id=><td>input admin id </td><td> <input type="text" name="id"> </td>
             <td>new user name </td><td> <input type="text" name="user_name"> </td>
             <td> new password</td><td> <input type="text" name="password"> </td>
             <td> new email</td><td> <input type="text" name="email"> </td></tr>
-        <tr><td> <input type="submit"  value="edit" onclick="alert('are you wont to edite admin?')">
+        <tr><td> <input type="submit"  value="edit" onclick="return confirm('are you wont to edite admin?')">
             <input type="button" value="go back" onclick="document.getElementById('admins edit').hidden=true"> </td></tr>
     </table>
 </form>
 <!--==========================================================================================================================================================================-->
-<form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/delete.php?who=admins">
+<form name="admins" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/delete.php?who=admins">
     <table id="admins delete" border="10" hidden="true" name="admins">
         <tr><td>delete admin</td></tr>
         <tr id=><td>input admin id </td><td> <input type="text" name="id"> </td>
-        </tr><tr> <td><input type="submit" value="delete" onclick="alert('are you wont to delete admin?')"> <td>
+        </tr><tr> <td><input type="submit" value="delete" onclick="return confirm('are you wont to delete admin?')"> <td>
         <input type="button" value="go back" onclick="document.getElementById('admins delete').hidden=true"></td></tr>
         </table>
 </form>
+</footer>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<form method="post" action="" hidden="" id="show users" name="users">
+<footer id="show users" hidden="true">
+<form method="post" action=""   name="users">
     <table id="users"  border="10"  >
         <tr><h2>users : </h2> </tr>
         <tr><td><input type="button" onclick="document.getElementById('delete user').hidden=false" value="delete_user"></td><tr><tr>
@@ -76,17 +80,18 @@
     <table id="delete user" border="10" hidden="true" name="users">
         <tr><td>delete user</td></tr>
         <td>input user id </td><td> <input type="text" name="id"> </td>
-        <tr> <td><input type="submit" value="delete user" onclick="alert('are you wont to delete user?')">
+        <tr> <td><input type="submit" value="delete user" onclick="return confirm('are you wont to delete user?')">
             <input type="button" value="go back" onclick="document.getElementById('delete user').hidden=true"></td></tr>
          </table>
 </form>
+</footer>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<form hidden="true" id="show offers" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=offers">
+<footer hidden="true" id="show offers">
+<form  method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=offers">
     <table id="offers" border="10" name="offers" >
-        <tr><td><input type="button" onclick="document.getElementById('offer edit').hidden=false" value="edit offer"></td>
-            <td><input type="button" onclick="document.getElementById('offer delete').hidden=false" value="delete offer"> </td>
-            <td><input type="button" onclick="document.getElementById('add offer').hidden=false" value="add offer"></td></tr>
+        <tr><td><input type="button" onclick="document.getElementById('offer edit').hidden=false,document.getElementById('offer delete').hidden=true,document.getElementById('add offer').hidden=true" value="edit offer"></td>
+            <td><input type="button" onclick="document.getElementById('offer delete').hidden=false,document.getElementById('offer edit').hidden=true,document.getElementById('add offer').hidden=true" value="delete offer"> </td>
+            <td><input type="button" onclick="document.getElementById('add offer').hidden=false,document.getElementById('offer edit').hidden=true,document.getElementById('offer delete').hidden=true" value="add offer"></td></tr>
         <tr><h2>offers : </h2></tr>
         <tr id=><td>id </td>
             <td>offer name </td>
@@ -108,7 +113,7 @@
         <td>add internet amount</td><td> <input type="text" name="internet"> </td>
         <td>add money value</td><td> <input type="text" name="money_value"> </td></tr>
         <td>add offer code</td><td> <input type="text" name="offer_code"> </td></tr>
-        <tr> <td><input type="submit" value="add" onclick="alert('are you wont to add offer?')">
+        <tr> <td><input type="submit" value="add" onclick="return confirm('are you wont to add offer?')">
             <input type="button" value="go back" onclick="document.getElementById('add offer').hidden=true"></td></tr>
     </table>
 </form>
@@ -123,7 +128,7 @@
             <td>new internet amount</td><td> <input type="text" name="internet"> </td>
             <td>new money value</td><td> <input type="text" name="money_value"> </td></tr>
         <td>new offer code</td><td> <input type="text" name="offer_code"> </td></tr>
-        <tr><td> <input type="submit"  value="edit" onclick="alert('are you wont to edite offer?')">
+        <tr><td> <input type="submit"  value="edit" onclick="return confirm('are you wont to edite offer?')">
             <input type="button" value="go back" onclick="document.getElementById('offer edit').hidden=true"> </td></tr>
     </table>
 </form>
@@ -133,18 +138,16 @@
     <table id="offer delete" border="10" hidden="true" name="offers">
         <tr><td>delete offer</td></tr>
         <tr id=><td>input offer id </td><td> <input type="text" name="id"> </td>
-        </tr><tr> <td><input type="submit" value="delete" onclick="alert('are you wont to delete offer?')"> <td>
+        </tr><tr> <td><input type="submit" value="delete" onclick="return confirm('are you wont to delete offer?')"> <td>
         <input type="button" value="go back" onclick="document.getElementById('offer delete').hidden=true"></td></tr>
          </table>
-</form>
+</form></footer>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<form hidden="true" id="show bills" method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=bills">
+<footer hidden="true" id="show bills">
+<form  method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=bills">
     <table id="bills" border="10" name="bills" >
-        <tr><td><input type="button" onclick="document.getElementById('bill edit').hidden=false" value="edit bill"></td>
-            <td><input type="button" onclick="document.getElementById('bill delete').hidden=false" value="delete bill"> </td>
-            <td><input type="button" onclick="document.getElementById('add bill').hidden=false" value="add bill"></td></tr>
+        <tr><td><input type="button" onclick="document.getElementById('bill delete').hidden=false,document.getElementById('add bill').hidden=true" value="delete bill"> </td>
+            <td><input type="button" onclick="document.getElementById('add bill').hidden=false,document.getElementById('bill delete').hidden=true" value="add bill"></td></tr>
         <tr><h2>bills : </h2></tr>
         <tr id=><td>id </td>
             <td>phone number </td>
@@ -158,36 +161,59 @@
 <form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/insert.php?who=bills">
     <table id="add bill" border="10" hidden="true" name="bills">
         <tr><td>add bill</td></tr>
-        <td>add phone number </td><td> <input type="text" name="phone_number"> </td>
+        <td>chose phone number </td><td> <input type="text" name="phone_number"> </td>
         <td>add money amount </td><td> <input type="text" name="money_amount"> </td></tr><tr>
-        <td>add user_name</td><td> <input type="text" name="user_name"> </td>
        </tr>
-        <tr> <td><input type="submit" value="add" onclick="alert('are you wont to add bill?')">
+        <tr> <td><input type="submit" value="add" onclick="return confirm('are you wont to add bill?')">
             <input type="button" value="go back" onclick="document.getElementById('add bill').hidden=true"></td></tr>
-    </table>
-</form>
-<!--==========================================================================================================================================================================-->
-<form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/edit.php?who=bills">
-    <table id="bill edit" border="10" hidden="true" name="bills">
-        <tr><td>edit bill </td></tr>
-        <tr id=><td>input bill id </td><td> <input type="text" name="bill_id"> </td>
-            <td>new phone number </td><td> <input type="text" name="phone_number"> </td>
-            <td>new money amount </td><td> <input type="text" name="money_amount"> </td>
-            <td>new user_name</td><td> <input type="text" name="user_name"> </td></tr>
-        <tr><td> <input type="submit"  value="edit" onclick="alert('are you wont to edite bill?')">
-            <input type="button" value="go back" onclick="document.getElementById('bill edit').hidden=true"> </td></tr>
     </table>
 </form>
 <!--==========================================================================================================================================================================-->
 
 <form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/delete.php?who=bills">
-    <table id="bill delete" border="10" hidden="true" name="offers">
+    <table id="bill delete" border="10" hidden="true" name="bills">
         <tr><td>delete offer</td></tr>
         <tr id=><td>input bill id </td><td> <input type="text" name="id"> </td>
-        </tr><tr> <td><input type="submit" value="delete" onclick="alert('are you wont to delete bill?')"> <td>
+        </tr><tr> <td><input type="submit" value="delete" onclick="return confirm('are you wont to delete bill?')"> <td>
         <input type="button" value="go back" onclick="document.getElementById('bill delete').hidden=true"></td></tr>
     </table>
-</form>
+</form></footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer hidden="true" id="show jobs">
+    <form>
+        <table id="jobs" border="10" name="jobs" >
+            <tr><td><input type="button" onclick="document.getElementById('job delete').hidden=false,document.getElementById('add job').hidden=true" value="delete job"> </td>
+                <td><input type="button" onclick="document.getElementById('add job').hidden=false,document.getElementById('job delete').hidden=true" value="add job"></td></tr>
+            <tr><h2>bills : </h2></tr>
+            <tr id=><td>id </td>
+                <td>job_name </td>
+                <td>job_title</td>
+                <td>salery</td>
+            </tr>
+        </table>
+    </form>
+    <!--==========================================================================================================================================================================-->
+
+    <form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/insert.php?who=job">
+        <table id="add job" border="10" hidden="true" name="jobs">
+            <tr><td>add job</td></tr>
+            <td>job name </td><td> <input type="text" name="job_name"> </td>
+            <td>job title </td><td> <input type="text" name="job_title"> </td>
+            <td> salery </td><td> <input type="text" name="salary"> </td></tr>
+            <tr> <td><input type="submit" value="add" onclick="return confirm('are you wont to add job?')">
+                <input type="button" value="go back" onclick="document.getElementById('add job').hidden=true"></td></tr>
+        </table>
+    </form>
+    <!--==========================================================================================================================================================================-->
+
+    <form method="post" action="http://localhost:63342/bwp-501-bsmk3/php/delete.php?who=job">
+        <table id="job delete" border="10" hidden="true" name="jobs">
+            <tr><td>delete job</td></tr>
+            <tr id=><td>input job id </td><td> <input type="text" name="id"> </td>
+            </tr><tr> <td><input type="submit" value="delete" onclick="return confirm('are you wont to delete job?')"> <td>
+            <input type="button" value="go back" onclick="document.getElementById('job delete').hidden=true"></td></tr>
+        </table>
+    </form></footer>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 <script>
@@ -215,7 +241,7 @@
       get_users()
       <!--==========================================================================================================================================================================-->
       async function get_offers(){
-        const responce= await  fetch("http://localhost:63342/bwp-501-bsmk3/php/offers.php")
+        const responce= await  fetch("http://localhost:63342/bwp-501-bsmk3/php/offers.php?who=admin")
         const offers=await responce.json()
         console.log(offers)
         for(i=0;i<offers.length;i++) {
@@ -225,9 +251,8 @@
     }
       get_offers()
       <!--==========================================================================================================================================================================-->
-
       async function get_bills(){
-          const responce= await  fetch("http://localhost:63342/bwp-501-bsmk3/php/bills.php?")
+          const responce= await  fetch("http://localhost:63342/bwp-501-bsmk3/php/bills.php?who=admin")
           const bills=await responce.json()
           console.log(bills)
           for(i=0;i<bills.length;i++) {
@@ -236,7 +261,15 @@
       }
       get_bills()
       <!--==========================================================================================================================================================================-->
-
+      async function get_jobs(){
+          const responce= await  fetch("http://localhost:63342/bwp-501-bsmk3/php/jobs.php?")
+          const jobs=await responce.json()
+          console.log(jobs)
+          for(i=0;i<jobs.length;i++) {
+              document.getElementById("jobs").innerHTML += '<tr><td>' + jobs[i].id+'</td><td>'+ jobs[i].job_name+'</td><td>'+ jobs[i].job_title + '</td><td>'+
+                  jobs[i].salary+'</td></tr>';
+          }
+      }
+      get_jobs()
 </script>
-</body>
 </html>
