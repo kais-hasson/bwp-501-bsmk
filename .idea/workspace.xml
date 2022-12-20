@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac5c8c9e-9e79-4183-b8a9-02403f9d239b" name="Changes" comment="ttt">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/forget_password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/job.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/jobs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/admin register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/bill.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/bills.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/humans.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/insert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/offer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/offers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/pdo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bwp-501-bsmk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bwp-501-bsmk.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin register.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/admin register.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/admin register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/bills.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/bills.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/offers.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/offers.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +26,6 @@
   </component>
   <component name="ComposerSettings">
     <execution />
-  </component>
-  <component name="ExportToHTMLSettings">
-    <option name="printScope" value="4" />
-    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,7 +36,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -51,11 +46,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/php/bills.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/php/jobs.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/php/offers.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/php/admin register.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/admin register.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/php/admin register.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +60,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1">
     <include_path>
-      <path value="$USER_HOME$/xampp/php/cfg" />
+      <path value="$PROJECT_DIR$/../../../xampp/php/cfg" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -84,7 +76,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunConfigurationTargetLRU" value="3af9f1e5-faf1-415b-8a1f-01d71b6cff8b" />
@@ -98,11 +89,10 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="HTTP Request&#10;PHP" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/edite.html" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.MS SQL Server, MS Azure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.admin register.html">
@@ -125,8 +115,8 @@
     <configuration name="edit.html" type="JavascriptDebugType" uri="http://localhost:63342/bwp-501-bsmk3/edite.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="kais" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" singleton="false" document_root="$PROJECT_DIR$" port="8080" router_script="$USER_HOME$/xampp/php/phpdbg.exe" use_router_script="true">
-      <CommandLine workingDirectory="$USER_HOME$/xampp/php" />
+    <configuration name="kais" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" singleton="false" document_root="$PROJECT_DIR$" port="8080" router_script="$PROJECT_DIR$/../../../xampp/php/phpdbg.exe" use_router_script="true">
+      <CommandLine workingDirectory="$PROJECT_DIR$/../../../xampp/php" />
       <method v="2">
         <option name="LaunchBrowser.Before.Run" />
       </method>
@@ -182,12 +172,6 @@
       <workItem from="1670258373573" duration="32344000" />
       <workItem from="1670355318179" duration="5999000" />
       <workItem from="1670429167735" duration="268000" />
-      <workItem from="1670506729882" duration="3729000" />
-      <workItem from="1671255405499" duration="104000" />
-      <workItem from="1671270240051" duration="2250000" />
-      <workItem from="1671362810563" duration="14897000" />
-      <workItem from="1671438118558" duration="16007000" />
-      <workItem from="1671532266489" duration="4751000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="sdfsdfs">
       <created>1669405135248</created>
@@ -212,56 +196,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
-        <entry key="d5f10e52-6d8c-4a6b-b45c-84394c7c8f27">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="besmk/main" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="d5f10e52-6d8c-4a6b-b45c-84394c7c8f27" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
