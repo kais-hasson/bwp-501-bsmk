@@ -1,13 +1,10 @@
 <?php
+
+
 header("Content-type: application/json");
 require_once "C:\Users\hp\bwp-501-bsmk3\php\pdo.php";
-require_once "C:\Users\hp\bwp-501-bsmk3\admin register.html";
 $who=$_GET['who'];
 $deleted_id=$_POST['id'];
-session_start();
-if(empty($_SESSION["token"])){
-    header("location:http://localhost:63342/bwp-501-bsmk3/admin%20register.html?");}
-else{
 if($who=="admins")
 {
     try {
@@ -54,14 +51,3 @@ elseif ($who=="bills"){
     (PDOException $e) {
         print_r(json_encode( "Connection failed: " . $e->getMessage()));
     }}
-elseif ($who=="job"){
-    try {
-        if (isset($pdo)) {
-            $con = $pdo->prepare("DELETE FROM besmk.jobs WHERE id='$deleted_id'");
-            $con->execute();
-            header("location:http://localhost:63342/bwp-501-bsmk3/admin.html?");
-        }
-    } catch
-    (PDOException $e) {
-        print_r(json_encode( "Connection failed: " . $e->getMessage()));
-    }}}

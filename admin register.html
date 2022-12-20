@@ -5,14 +5,11 @@
     <title>admin.mtn</title>
 </head>
 <body>
-<style>
-
-</style>
-<form>
+<form >
     user_name:<br><input type="text" name="user_name" > <br>
     password:<br><input type="password" name="password"><br>
     <p><span id="show exception"></span></p>
-    <a href="http://localhost:63342/bwp-501-bsmk3/admin.html" id="go"></a>
+    <a href="admin.html" id="go"></a>
   <input type="button" value="submit" onclick="get_exception(user_name.value,password.value)">
     <script>
         async function get_exception(str_user_name,str_password) {
@@ -35,4 +32,3 @@
     </script>
 </form>
 </body>
-</html>
